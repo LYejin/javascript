@@ -10,3 +10,5 @@ function handleTitleClick() {
 }
 
 title.addEventListener("click", handleTitleClick); // 괄호는 안 넣어도 된다.
+
+// html heading element = js 관점에서의 html
