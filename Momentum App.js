@@ -7,9 +7,16 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const loginButton = document.querySelector("#login-form button");
 
-function onLoginSubmit(tomato) {
-  tomato.preventDefault(); // evemt의 기본  행동 등을 발생되지 않도록 막는다.
+const link = document.querySelector("a");
+
+function onLoginSubmit(event) {
+  event.preventDefault(); // evemt의 기본  행동 등을 발생되지 않도록 막는다.
   console.log(loginInput.value); // 즉 새로고침을 막고 있다.
+}
+
+function handleLinkClick(event) {
+  event.preventDefault();
+  console.dir(event);
 }
 
 // function onLoginBtnClick() {
@@ -23,3 +30,4 @@ function onLoginSubmit(tomato) {
 
 //loginButton.addEventListener("click", onLoginBtnClick);
 loginForm.addEventListener("submit", onLoginSubmit);
+link.addEventListener("click", handleLinkClick);
